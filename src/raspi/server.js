@@ -1,7 +1,6 @@
 import Express from 'express';
 import socketIo from 'socket.io';
-import { Server } from 'http';
-import bodyParser from 'body-parser';
+import { Server as server } from 'http';
 
 import path from 'path';
 
@@ -24,7 +23,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // initialize socket.io
-const http = Server(app);
+const http = server(app);
 const io = socketIo(http);
 
 app.use(Express.static(path.join(__dirname, '..', 'public')));
@@ -39,16 +38,12 @@ http.listen(3000, () => console.log('listening on 3000'));
 const myBoard = new Board();
 
 myBoard.on('ready', () => {
-
   // initialize led
   const led = new Led(13);
   let stat = true;
   led.on();
 
   io.on('connection', (socket) => {
-
-    console.log('a user connected');
-
     socket.emit('led:status', stat);
     // register listener
     socket.on('led:toggle', () => {

@@ -4,7 +4,7 @@ var path    = require('path');
 module.exports = {
 
   entry: {
-    app: path.join(__dirname, 'src', 'public', 'js')
+    app: path.join(__dirname, 'src', 'public', 'js'),
   },
 
   output: {
@@ -29,16 +29,10 @@ module.exports = {
         loader: 'babel',
         query: {
           presets: ['react-hmre'],
-        }
+        },
       },
     ],
   },
 
-  plugins: [ new webpack.HotModuleReplacementPlugin() ]
- };
- 
- 
- 
- 
- 
- 
+  plugins: [new webpack.HotModuleReplacementPlugin()],
+};
