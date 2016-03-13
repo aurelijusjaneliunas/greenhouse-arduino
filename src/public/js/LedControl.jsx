@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import io from 'socket.io-client';
-import Toggle from 'material-ui/lib/toggle';
-import Paper from 'material-ui/lib/paper';
 
 const socket = io();
 
@@ -27,19 +25,9 @@ class LedControl extends Component {
 
   render() {
     return (
-      <div className="row center-xs">
-        <Paper
-          zDepth={3}
-          className="col-xs-8 col-md-4 row"
-          style={{ paddingTop: '20px' }}
-        >
-          <Toggle
-            onToggle={this._toggleLed}
-            label="Toggle LED"
-            toggled={this.state.led}
-          />
-          <p>Led Status: { this.state.led ? 'On' : 'Off' }</p>
-        </Paper>
+      <div>
+        <button onClick={this._toggleLed}>Toggle Led</button>
+        <p>Led Status: { this.state.led ? 'On' : 'Off' }</p>
       </div>
     );
   }
