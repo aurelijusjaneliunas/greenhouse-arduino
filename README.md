@@ -1,4 +1,4 @@
-# Talky Johnny
+# Arduino GreenHouse project
 Talk to your robot via web sockets! A boilerplate for JavaScript robotics
 with johnny-five, socket.io and Reactjs
 
@@ -8,8 +8,8 @@ with johnny-five, socket.io and Reactjs
 * Make sure to add yourself to certain groups as described [here](https://wiki.archlinux.org/index.php/Arduino#Accessing_serial)
 
 ```bash
-$ git clone https://github.com/lorix-lpan/talky-johnny
-$ cd talky-johnny
+$ git clone https://github.com/aurelijusjaneliunas/greenhouse-arduino.git
+$ cd greenhouse-arduino
 $ npm install
 # Connect your arduino to your PC/Raspberry Pi via serial
 # Connect a LED to pin 13
