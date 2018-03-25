@@ -1,2 +1,14 @@
 node_modules/
 *.log
+.idea/
+/node/
+lib
+*.iml
+node_modules
+.gradle
+build
+/docs/build
+/docs/.cache
+/docs/target
+.bundle
+target/

@@ -12,7 +12,7 @@
     "socket.io",
     "template"
   ],
-  "author": "Lawrence Pan <lawrencefeipan@gmail.com>",
+  "author": "Aurelijus Janeliunas <aurelijus.janeliunas@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.7.0",
